@@ -70,11 +70,17 @@ void testSensorEvent(){
       eventInTheCar(Eventos.TOUCH_EVENT);
   } else if(accelerometer.x > 3.00 && accelerometer.z > 2.00){
      eventInTheCar(Eventos.CAR_DISTURBANCE_EVENT);
-  } else if (light > 40.0){
+  } else if (light > 700.0){
       eventInTheCar(Eventos.INTRUDER_EVENT);
   } else if(proximity == 0){
     eventInTheCar(Eventos.PROXIMITY_EVENT);
   } else if(latitude != 0 && longitude != 0 && altitude!=0 && accelerometer.x > 3 && accelerometer.z > 2){
     eventInTheCar(Eventos.GPS_EVENT);
   }
+  else {
+    UIText = "";
+    displayPhoto = false;  
+    playSound = false;
+  }
+  
 }

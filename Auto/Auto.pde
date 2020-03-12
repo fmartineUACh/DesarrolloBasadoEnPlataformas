@@ -67,7 +67,7 @@ void draw()
    }
    else if(!displayPhoto && camera.isStarted()) 
      hasTakenPhoto = false;
-   if(playSound) {
+   if(playSound && !beep.isPlaying()) {
      beep.play();
    }
    else if(!playSound) {
