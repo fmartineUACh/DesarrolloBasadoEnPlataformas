@@ -15,7 +15,7 @@ PVector accelerometer;
 float light, proximity;
 KetaiLocation location; // 1
 double longitude, latitude, altitude;
-WhiteNoise beep;
+SoundFile beep;
 
 KetaiList connectionList;  // 4
 String info = "";  // 5
@@ -26,6 +26,7 @@ boolean playSound;
 
 ArrayList<String> devices = new ArrayList<String>();
 boolean isWatching = false;
+boolean hasTakenPhoto = false;
 
 void setup()
 {
@@ -46,11 +47,12 @@ void setup()
   camera.start();
   camera.setCameraID(1);
   
-  beep = new WhiteNoise(this);
+  beep = new SoundFile(this, "beep.mp3");
 }
 
 void onCameraPreviewEvent() {
-  camera.read();
+  if(!hasTakenPhoto)
+    camera.read();
 }
 
 void draw()
@@ -60,8 +62,11 @@ void draw()
   text(UIText, 30, 30, width, height);
    if(displayPhoto && camera.isStarted()) {
       image(camera, 300, 300, 720, 720);
+      hasTakenPhoto = true;
       camera.savePhoto();
    }
+   else if(!displayPhoto && camera.isStarted()) 
+     hasTakenPhoto = false;
    if(playSound) {
      beep.play();
    }
