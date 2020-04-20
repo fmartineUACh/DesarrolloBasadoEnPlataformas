@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!--Estilos para css llamando a el archivo en la carpeta -->
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estilosLeds.css">
+
+    <title>Start Playing WEB</title>
+</head>
+<body>
+    <div id="NavigationBar"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3>Estatus del automovil </h3>
+                    </div>
+                    <div class="panel-body">
+                        <p>Estatus</p>
+                        <p id="estatus"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Estilos para javaScript llamando a jquerty desde su pagina y a el archivo en la carpeta local -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="jsfunction/loadNavigationBar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--Iniciamos el servicio de firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var firebaseConfig = {
+            apiKey: "AIzaSyBGBAW6sHMYUPn17dCSPMngIx3BJolQnXg",
+            authDomain: "test-37209.firebaseapp.com",
+            databaseURL: "https://test-37209.firebaseio.com",
+            projectId: "test-37209",
+            storageBucket: "test-37209.appspot.com",
+            messagingSenderId: "96783547328",
+            appId: "1:96783547328:web:c4f61d6906b090f0d66625",
+            measurementId: "G-EB5LG17DNQ"
+        };
+        firebase.initializeApp(firebaseConfig);
+    </script>
+    <!--llamamos nuestra libreria personal de javaScript-->
+    <script src="jsfunction/carros.js"></script>
+</body>
+</html>
