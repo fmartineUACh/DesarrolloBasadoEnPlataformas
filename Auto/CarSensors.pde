@@ -52,8 +52,6 @@ void eventInTheCar(int event){
   }
   
   UIText = alerta;
-  //println("Se ha levantado la siguiente alerta: " + alerta + "\n Pero no hay dispositivo que nos escuche.");
-
 }
  
 class Eventos{
@@ -82,5 +80,5 @@ void testSensorEvent(){
     displayPhoto = false;  
     playSound = false;
   }
-  
+  fire.setValue("estatus", UIText);
 }
