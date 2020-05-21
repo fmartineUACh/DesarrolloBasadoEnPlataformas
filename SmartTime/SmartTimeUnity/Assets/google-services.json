@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "542332109398",
+    "firebase_url": "https://smarttime-894c9.firebaseio.com",
+    "project_id": "smarttime-894c9",
+    "storage_bucket": "smarttime-894c9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:542332109398:android:8c38503eecb8b17a2971f7",
+        "android_client_info": {
+          "package_name": "com.debapla.smarttime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "542332109398-brqmbvm3a6fnke6c0lv4ecik22smr98s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCtEyjScBQrqv3rci4wG4fjMHw88VllPx8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "542332109398-brqmbvm3a6fnke6c0lv4ecik22smr98s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
