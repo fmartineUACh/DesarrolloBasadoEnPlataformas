@@ -13,8 +13,13 @@ public class WASDMovement : MonoBehaviour
     private void Update()
     {
         var moveInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        var direction = transform.rotation * moveInput.normalized * speed * Time.deltaTime;
+        direction.y = 0;
+        
 
-        transform.position += transform.rotation * moveInput.normalized * speed * Time.deltaTime;
-        transform.position = new Vector3(transform.position.x, 2, transform.position.z);
+        if (!Physics.Raycast(transform.position, direction, direction.magnitude * 3))
+        {
+            transform.position += direction;
+        }
     }
 }

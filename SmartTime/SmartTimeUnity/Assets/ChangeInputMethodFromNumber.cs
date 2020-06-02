@@ -14,8 +14,8 @@ public class ChangeInputMethodFromNumber : MonoBehaviour
         _gpsMovement = ServiceLocator.Resolve<UpdatePositionFromFirebase>();
         _text = GetComponent<TextMeshProUGUI>();
         
-        _wasdMovement.enabled = false;
-        _gpsMovement.enabled = true;
+        _wasdMovement.enabled = true;
+        _gpsMovement.enabled = false;
     }
 
     private void Update()

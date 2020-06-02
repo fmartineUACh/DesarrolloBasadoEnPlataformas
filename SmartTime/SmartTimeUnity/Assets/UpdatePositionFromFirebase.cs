@@ -51,8 +51,11 @@ public class UpdatePositionFromFirebase : MonoBehaviour
 
     private void OnDestroy()
     {
-        _database.GetReference(Latitude).ValueChanged -= OnLatitudeChanged;
-        _database.GetReference(Longitude).ValueChanged -= OnLongitudeChanged;
+        if (_database != null)
+        {
+            _database.GetReference(Latitude).ValueChanged -= OnLatitudeChanged;
+            _database.GetReference(Longitude).ValueChanged -= OnLongitudeChanged;
+        }
     }
 
     private void RaisePositionChangedEvent(ValueChangedEventArgs args, string nameOfValueThatChanged)

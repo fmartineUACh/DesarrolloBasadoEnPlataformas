@@ -5,9 +5,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="SmartTime.MainPage">
-    <StackLayout>
-        <Label Text="{Binding Message}" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <FlexLayout Direction="Column" AlignItems="Center" JustifyContent="Center">
+        <Label Text="{Binding Latitude, StringFormat='Latitude {0:F4}'}" />
+        <Label Text="{Binding Longitude, StringFormat='Longitude {0:F4}'}" />
+        <Label Text="{Binding Temperature, StringFormat='Temperature {0:F4}°C'}" />
+        <Button Text="Toggle TV" Command="{Binding ToggleTVCommand}" ></Button>
+    </FlexLayout>
 </ContentPage>
