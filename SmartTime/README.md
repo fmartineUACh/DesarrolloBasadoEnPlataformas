@@ -1,7 +1,7 @@
 # Importante
 Al iniciar la ejecucion en la escena de unity es necesiario esperar unos 7 segundos en lo que se realiza la conexión con Firebase.  
 
-Para cambiar la forma de controlar el personaje entre teclado y GPS se presionan las teclas 1 y 2.   
+Para cambiar la forma de controlar la cámara entre teclado y GPS se presionan las teclas 1 y 2.   
 
 # Scripts mas importantes  
 ## Unity  
